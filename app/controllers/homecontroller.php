@@ -2,13 +2,15 @@
 
 namespace MVC\controllers;
 use MVC\core\controller;
-use PDO;
+use MVC\models\user;
+
 class homecontroller extends controller
 {
     public function index(){
-        $data = $this->db()->run("SELECT * FROM users")->fetchAll(PDO::FETCH_ASSOC);
+        $user = new user();
+        $data = $user->getAllUsers();
         $title = "home index";
         $h1  = "Asmaa Gamal";
-        $this->view('home/index',['title'=>$title , 'h1'=>$h1 , 'data'=>$data]);
+        $this->view('home/index',['title'=>$title, 'h1'=>$h1, 'data'=>$data]);
     }
 }
