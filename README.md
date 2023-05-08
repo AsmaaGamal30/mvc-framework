@@ -1,2 +1,2 @@
-# mvc-structure
-MVC structure for PHP projects
+# mvc-framework
+MVC framework for PHP projects
