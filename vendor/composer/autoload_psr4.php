@@ -7,5 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'MVC\\' => array($baseDir . '/app'),
+    'GUMP\\' => array($vendorDir . '/wixel/gump/src'),
     'Dcblogdev\\PdoWrapper\\' => array($vendorDir . '/dcblogdev/pdo-wrapper/src'),
 );

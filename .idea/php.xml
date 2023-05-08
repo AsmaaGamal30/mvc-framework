@@ -14,6 +14,7 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/dcblogdev/pdo-wrapper" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/wixel/gump" />
     </include_path>
   </component>
   <component name="PhpStanOptionsConfiguration">

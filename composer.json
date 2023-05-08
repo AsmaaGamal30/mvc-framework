@@ -6,6 +6,8 @@
     },
     "require": {
         "dcblogdev/pdo-wrapper": "^2.0",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "wixel/gump": "^2.0"
+
     }
 }
