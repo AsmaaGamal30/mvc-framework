@@ -7,14 +7,14 @@ class model
     static function db(){
         $options = [
             //required
-            'username' => 'root',
-            'database' => 'mvc',
+            'username' => USERNAME,
+            'database' => DATABASE_NAME,
             //optional
-            'password' => '',
-            'type' => 'mysql',
-            'charset' => 'utf8',
-            'host' => 'localhost',
-            'port' => '3306'
+            'password' => PASSWORD,
+            'type' => DATABASE_TYPE,
+            'charset' => CHARSET,
+            'host' => SERVER,
+            'port' => PORT
         ];
 
         return $db = new Database($options);

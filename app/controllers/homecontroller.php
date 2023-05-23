@@ -5,6 +5,7 @@ use MVC\core\controller;
 use MVC\models\user;
 use GUMP;
 use MVC\core\Session;
+use MVC\core\helpers;
 
 
 class homecontroller extends controller
@@ -34,10 +35,14 @@ class homecontroller extends controller
             $user = new user();
             $data = $user->getUser($_POST['email'],$_POST['password']);
             Session::Set("user",$data);
-            header('LOCATION: user/index');
+            helpers::redirect('user/index');
         }
 
 
+    }
+
+    public function logout(){
+        Session::Stop();
     }
 
     public function register(){
@@ -55,7 +60,7 @@ class homecontroller extends controller
             $user = new user();
             $data = $user->insertUser($_POST['username'], $_POST['email'], $_POST['password']);
             Session::Set("user",$data);
-            header('LOCATION: user/index');
+            helpers::redirect('user/index');
         }else{
             Session::Stop();  
         }

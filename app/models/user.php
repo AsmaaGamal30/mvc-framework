@@ -3,12 +3,13 @@
 namespace MVC\models;
 
 use MVC\core\model;
-use PDO;
+
 
 class user extends model
 {
     public function getAllUsers(){
-        $data = model::db()->rows("SELECT * FROM `users`");
+        //$data = model::db()->rows("SELECT * FROM `users`");
+        $data = model::db()->run("SELECT * FROM users")->fetchAll();
         return $data;
     }
 
